@@ -131,24 +131,19 @@ class PaymentResponse {
 }
 
 class MomoPaymentInfo {
-  String appScheme;
-  String
-      merchantName; //Tên đối tác. được đăng ký tại https://business.momo.vn. VD: Google, Apple, Tiki , CGV Cinemas
-  String
-      merchantCode; //Mã đối tác, được cung cấp bởi MoMo tại https://business.momo.vn
+  String appScheme; //partnerSchemeId đối tác lấy tại from business.momo.vn
+  String merchantName; //Tên đối tác. được đăng ký tại https://business.momo.vn. VD: Google, Apple, Tiki , CGV Cinemas
+  String merchantCode; //Mã đối tác, được cung cấp bởi MoMo tại https://business.momo.vn
   String partnerCode;
-  String merchantNameLabel;
-
-  int amount; //Kiểu integer
-  int fee; //Kiểu integer
-  String? description; //mô tả đơn hàng - short description
-  String? extra;
-  String? username;
-  String
-      orderId; //uniqueue id cho Bill order, giá trị duy nhất cho mỗi đơn hàng
+  String merchantNameLabel; //Nhãn tên đối tác
+  int amount; //Số tiền thanh toán, kiểu integer
+  int fee; //Phí dịch vụ nếu có, Kiểu integer
+  String? description; //Mô tả đơn hàng - short description
+  String? extra; //json string - that should be more bill extra info
+  String? username; //user id/user identify/user email
+  String orderId; //uniqueue id cho Bill order, giá trị duy nhất cho mỗi đơn hàng
   String orderLabel; //gán nhãn
-
-  bool isTestMode;
+  bool isTestMode; //bật chế độ test/bật chế độ test
 
   MomoPaymentInfo({
     required this.appScheme,
