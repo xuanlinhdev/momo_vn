@@ -15,7 +15,7 @@ dependencies:
     sdk: flutter
   momo_vn:
     git:
-      url: https://github.com/lamdev99/momo.vn.git
+      url: https://github.com/xuanlinhdev/momo_vn.git
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
